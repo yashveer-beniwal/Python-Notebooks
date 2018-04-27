@@ -1,0 +1,24 @@
+digraph Tree {
+node [shape=box] ;
+0 [label="Aggregate rating <= 3.45\nentropy = 2.118\nsamples = 9551\nvalue = [301, 1079, 2100, 3737, 2148, 186]"] ;
+1 [label="Aggregate rating <= 2.45\nentropy = 1.115\nsamples = 6071\nvalue = [0, 0, 0, 3737, 2148, 186]"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="Aggregate rating <= 0.9\nentropy = 0.401\nsamples = 2334\nvalue = [0, 0, 0, 0, 2148, 186]"] ;
+1 -> 2 ;
+3 [label="entropy = 0.0\nsamples = 2148\nvalue = [0, 0, 0, 0, 2148, 0]"] ;
+2 -> 3 ;
+4 [label="entropy = 0.0\nsamples = 186\nvalue = [0, 0, 0, 0, 0, 186]"] ;
+2 -> 4 ;
+5 [label="entropy = 0.0\nsamples = 3737\nvalue = [0, 0, 0, 3737, 0, 0]"] ;
+1 -> 5 ;
+6 [label="Aggregate rating <= 3.95\nentropy = 1.269\nsamples = 3480\nvalue = [301, 1079, 2100, 0, 0, 0]"] ;
+0 -> 6 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+7 [label="entropy = 0.0\nsamples = 2100\nvalue = [0, 0, 2100, 0, 0, 0]"] ;
+6 -> 7 ;
+8 [label="Aggregate rating <= 4.45\nentropy = 0.757\nsamples = 1380\nvalue = [301, 1079, 0, 0, 0, 0]"] ;
+6 -> 8 ;
+9 [label="entropy = 0.0\nsamples = 1079\nvalue = [0, 1079, 0, 0, 0, 0]"] ;
+8 -> 9 ;
+10 [label="entropy = 0.0\nsamples = 301\nvalue = [301, 0, 0, 0, 0, 0]"] ;
+8 -> 10 ;
+}
